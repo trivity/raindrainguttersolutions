@@ -20,8 +20,8 @@ const SVC_ICONS = [
   "https://www.figma.com/api/mcp/asset/567db895-22f5-4a56-9d98-546ed8fe39ae",
 ];
 
-const ELLIPSE = "https://www.figma.com/api/mcp/asset/0f1afd0b-7da1-47c4-b0f7-96d7fa4d70d9";
-const MAN_PHOTO = "https://www.figma.com/api/mcp/asset/14d7888b-c975-4050-8db6-2ff382ce5d7b";
+const ELLIPSE = "https://www.figma.com/api/mcp/asset/5ec8b027-145f-438a-89e9-b52622b613b5";
+const SHIELD = "https://www.figma.com/api/mcp/asset/42127370-eca4-4dc1-8bfe-10ac1f12550e";
 const CHECK_W = "https://www.figma.com/api/mcp/asset/bf88b711-1912-44a7-b8fe-ce8270a4870c";
 
 const BEFORE_IMG = "https://www.figma.com/api/mcp/asset/fb10c979-05d4-4ccf-9de9-90af5db5c375";
@@ -161,8 +161,12 @@ export default function HomePage() {
       <section className="px-6 lg:px-[135px] py-[120px]">
         <div className="max-w-[1440px] mx-auto">
           <div className="bg-[#333] rounded-[30px] relative flex flex-col gap-[25px] items-start pl-[135px] lg:pl-[483px] pr-[60px] py-[60px] overflow-visible min-h-[300px]">
-            <div className="absolute left-[17px] top-[-24px] size-[440px] pointer-events-none"><Image src={ELLIPSE} alt="" fill className="object-contain" /></div>
-            <div className="absolute left-[106px] top-[104px] size-[230px] rounded-full overflow-hidden pointer-events-none"><Image src={MAN_PHOTO} alt="" fill className="object-cover" /></div>
+            <div className="absolute left-[17px] top-[-24px] size-[440px] pointer-events-none">
+              <Image src={ELLIPSE} alt="" fill className="object-contain" />
+              <div className="absolute left-[89px] top-[89px] size-[263px] rounded-full overflow-hidden">
+                <Image src={SHIELD} alt="" fill className="object-cover" />
+              </div>
+            </div>
             <div className="text-white">
               <h2 className="text-[42px] leading-[52px]">
                 <span className="font-bold">Backed by a </span>
