@@ -1,17 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const BANNER = "https://www.figma.com/api/mcp/asset/4bd4eda4-f85c-4d64-b019-5f6672de47cf";
-const ARROW_W = "https://www.figma.com/api/mcp/asset/37904bf4-8800-4d4c-b28e-e1714b600703";
-const MAP_IMG = "https://www.figma.com/api/mcp/asset/01450fc4-53ba-41c7-943f-2fd6afe74b9b";
-const FORM_BG = "https://www.figma.com/api/mcp/asset/2ffdda63-6ab9-4e72-bdde-ed8f1e60bfcc";
-const MASCOT = "https://www.figma.com/api/mcp/asset/8d3905ad-8dbe-4213-a5c0-0fff4b9b4e31";
-
-const INFO_ICONS = [
-  "https://www.figma.com/api/mcp/asset/538ca0c9-c2e5-4ddb-ad97-cb0c46a3a3b6",
-  "https://www.figma.com/api/mcp/asset/1455bc15-4cbb-4e56-a3c3-43474d285b23",
-  "https://www.figma.com/api/mcp/asset/40913861-3a65-4c50-967e-7e84becd0a64",
-];
+const BANNER     = "https://www.figma.com/api/mcp/asset/2d53f8be-59e0-4a25-b34b-055de4183b6b";
+const ARROW_W    = "https://www.figma.com/api/mcp/asset/37904bf4-8800-4d4c-b28e-e1714b600703";
+const MAP_IMG    = "https://www.figma.com/api/mcp/asset/ca5dfa36-c937-4c91-b269-48cc69db5f31";
+const FORM_BG    = "https://www.figma.com/api/mcp/asset/edb361fa-5384-4957-a0ef-6edf4fd0578e";
+const MASCOT     = "https://www.figma.com/api/mcp/asset/7bfdb5bd-55b4-47a4-b6c3-0c3f048f8be9";
+const ICON_ADDR  = "https://www.figma.com/api/mcp/asset/e14bb083-4706-43c5-aa28-58047ba3a495";
+const ICON_PHONE = "https://www.figma.com/api/mcp/asset/5b5c2b51-e89b-4fd5-9049-dee033d20a9d";
+const ICON_HOURS = "https://www.figma.com/api/mcp/asset/4650695e-6fa2-436a-b068-635aebc77bdf";
 
 export default function ContactPage() {
   return (
@@ -27,91 +24,101 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Info Cards */}
-      <section className="px-6 lg:px-[135px] py-[60px] bg-white">
+      {/* Get In Touch — 3 floating-icon cards */}
+      <section className="px-6 lg:px-[135px] py-[100px] bg-white">
         <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-            {[
-              { icon: INFO_ICONS[0], title: "Our Address", lines: ["9 stonebrook Ct,", "Little Rock AR 72211"] },
-              { icon: INFO_ICONS[1], title: "Phone & Email", lines: ["(501) 722-3455", "probertson@raindrainsolutions.com"] },
-              { icon: INFO_ICONS[2], title: "Working Hours", lines: ["Mon – Sat: 6:00am – 8:00pm", "Sunday – CLOSED"] },
-            ].map((card) => (
-              <div key={card.title} className="flex flex-col items-center text-center gap-[16px] bg-[#f8fbfd] border border-[rgba(0,0,0,0.08)] rounded-[20px] px-[30px] py-[40px]">
-                <div className="relative size-[70px]">
-                  <Image src={card.icon} alt="" fill className="object-contain" />
-                </div>
-                <h3 className="text-[#242424] text-[20px] font-bold leading-[28px]">{card.title}</h3>
-                {card.lines.map((line) => (
-                  <p key={line} className="text-[#242424] text-[16px] font-medium leading-[26px]">{line}</p>
-                ))}
+          <div className="text-center mb-[80px]">
+            <h2 className="text-[#242424] text-[42px] leading-[52px]">
+              <span className="font-bold">Get In </span><span className="font-normal">Touch</span>
+            </h2>
+            <p className="text-[#242424] text-[16px] font-medium leading-[28px] mt-2 max-w-[624px] mx-auto">
+              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[15px]">
+            {/* Address */}
+            <div className="relative bg-[rgba(238,242,245,0.4)] rounded-[10px] pt-[85px] pb-[40px] px-[30px] flex flex-col items-center gap-[15px] text-center">
+              <div className="absolute -top-[43px] left-1/2 -translate-x-1/2 size-[85px]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={ICON_ADDR} alt="" className="w-full h-full object-contain" />
               </div>
-            ))}
+              <p className="text-[#077bce] text-[16px] font-medium tracking-[2.4px] uppercase leading-[20px]">Address</p>
+              <p className="text-[#242424] text-[18px] font-semibold tracking-[0.9px] leading-[30px]">
+                9 stonebrook Ct,<br />Little Rock AR 72211
+              </p>
+            </div>
+
+            {/* Contact */}
+            <div className="relative bg-[rgba(238,242,245,0.4)] rounded-[10px] pt-[85px] pb-[40px] px-[30px] flex flex-col items-center gap-[15px] text-center">
+              <div className="absolute -top-[43px] left-1/2 -translate-x-1/2 size-[85px] bg-white border-2 border-[#eef2f5] rounded-full flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={ICON_PHONE} alt="" className="size-[48px] object-contain" />
+              </div>
+              <p className="text-[#077bce] text-[16px] font-medium tracking-[2.4px] uppercase leading-[20px]">Contact Us</p>
+              <div className="text-[#242424] font-semibold tracking-[0.9px] leading-[30px]">
+                <p className="text-[18px]">(501) 722-3455</p>
+                <p className="text-[16px]">probertson@raindrainsolutions.com</p>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="relative bg-[rgba(238,242,245,0.4)] rounded-[10px] pt-[85px] pb-[40px] px-[30px] flex flex-col items-center gap-[15px] text-center">
+              <div className="absolute -top-[43px] left-1/2 -translate-x-1/2 size-[85px]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={ICON_HOURS} alt="" className="w-full h-full object-contain" />
+              </div>
+              <p className="text-[#077bce] text-[16px] font-medium tracking-[2.4px] uppercase leading-[20px]">Working Hours</p>
+              <div className="text-[#242424] text-[18px] font-semibold tracking-[0.9px] leading-[30px]">
+                <p>Mon – Sat 6:00am – 8:00pm</p>
+                <p>Sunday – CLOSED</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Map + Form */}
-      <section className="px-6 lg:px-[135px] pb-[100px] bg-white">
-        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row rounded-[20px] overflow-hidden min-h-[680px]">
-          {/* Map left half */}
-          <div className="relative w-full lg:w-1/2 h-[400px] lg:h-auto">
-            <Image src={MAP_IMG} alt="Map" fill className="object-cover" />
+      <section className="flex flex-col lg:flex-row">
+        {/* Map */}
+        <div className="relative w-full lg:w-1/2 h-[400px] lg:h-[693px]">
+          <Image src={MAP_IMG} alt="Map" fill className="object-cover" />
+        </div>
+
+        {/* Form */}
+        <div className="relative w-full lg:w-1/2 h-[693px] flex flex-col justify-center px-[50px] lg:px-[80px] py-[69px]">
+          <div className="absolute inset-0">
+            <Image src={FORM_BG} alt="" fill className="object-cover" />
+            <div className="absolute inset-0 bg-[rgba(7,123,206,0.7)]" />
           </div>
 
-          {/* Form right half */}
-          <div className="relative w-full lg:w-1/2 flex flex-col justify-center px-[50px] lg:px-[70px] py-[60px]">
-            {/* bg texture + overlay */}
-            <div className="absolute inset-0">
-              <Image src={FORM_BG} alt="" fill className="object-cover" />
-              <div className="absolute inset-0 bg-[rgba(7,123,206,0.7)]" />
-            </div>
+          <div className="relative z-10 flex flex-col gap-[25px]">
+            <h2 className="text-white text-[42px] leading-[52px]">
+              <span className="font-bold">Lets </span><span className="font-normal">Contact.</span>
+            </h2>
 
-            <div className="relative z-10 flex flex-col gap-[30px]">
-              <div>
-                <h2 className="text-white text-[42px] leading-[52px]">
-                  <span className="font-bold">Lets </span><span className="font-normal">Contact.</span>
-                </h2>
+            <div className="flex flex-col gap-[15px]">
+              <div className="flex gap-[15px]">
+                <input type="text" placeholder="First Name *"
+                  className="flex-1 bg-white border border-black rounded-[5px] px-[20px] py-[10px] text-[14px] text-[#303030] tracking-[0.7px] shadow-[0px_22px_18px_0px_rgba(0,0,0,0.2)] focus:outline-none" />
+                <input type="text" placeholder="Last Name *"
+                  className="flex-1 bg-white rounded-[5px] px-[20px] py-[10px] text-[14px] text-[#303030] tracking-[0.7px] focus:outline-none" />
               </div>
-
-              <form className="flex flex-col gap-[20px]">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="bg-white/20 border border-white/40 rounded-[8px] px-[18px] py-[14px] text-white placeholder-white/70 text-[15px] font-medium focus:outline-none focus:border-white"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="bg-white/20 border border-white/40 rounded-[8px] px-[18px] py-[14px] text-white placeholder-white/70 text-[15px] font-medium focus:outline-none focus:border-white"
-                  />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="bg-white/20 border border-white/40 rounded-[8px] px-[18px] py-[14px] text-white placeholder-white/70 text-[15px] font-medium focus:outline-none focus:border-white"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="bg-white/20 border border-white/40 rounded-[8px] px-[18px] py-[14px] text-white placeholder-white/70 text-[15px] font-medium focus:outline-none focus:border-white"
-                  />
-                </div>
-                <textarea
-                  rows={5}
-                  placeholder="Your Message"
-                  className="bg-white/20 border border-white/40 rounded-[8px] px-[18px] py-[14px] text-white placeholder-white/70 text-[15px] font-medium focus:outline-none focus:border-white resize-none"
-                />
-                <button
-                  type="submit"
-                  className="bg-black hover:bg-gray-900 text-white text-[16px] font-semibold px-[30px] py-[15px] rounded-[8px] transition-colors self-start flex items-center gap-2"
-                >
-                  Send Message
-                  <span className="relative h-[14px] w-[21px] inline-block"><Image src={ARROW_W} alt="" fill className="object-contain" /></span>
-                </button>
-              </form>
+              <input type="tel" placeholder="Phone *"
+                className="w-full bg-white rounded-[5px] px-[20px] py-[10px] text-[14px] text-[#303030] tracking-[0.7px] focus:outline-none" />
+              <input type="email" placeholder="Email *"
+                className="w-full bg-white rounded-[5px] px-[20px] py-[10px] text-[14px] text-[#303030] tracking-[0.7px] focus:outline-none" />
+              <textarea placeholder="Message here..." rows={4}
+                className="w-full bg-white rounded-[5px] px-[20px] py-[20px] text-[14px] text-[#303030] tracking-[0.7px] focus:outline-none resize-none" />
             </div>
+
+            <button type="submit"
+              className="bg-black hover:bg-gray-900 inline-flex items-center gap-2 px-[25px] py-[10px] rounded-[8px] text-white text-[16px] font-semibold transition-colors self-start">
+              Send Message
+              <span className="relative h-[14px] w-[21px] inline-block">
+                <Image src={ARROW_W} alt="" fill className="object-contain" />
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -127,11 +134,13 @@ export default function ContactPage() {
               <span className="font-bold">Schedule Your Gutter </span><span className="font-normal">Inspection Today</span>
             </p>
             <div className="flex gap-[25px] flex-wrap">
-              <Link href="/contact" className="bg-black hover:bg-gray-900 flex items-center gap-2 px-[25px] py-[15px] rounded-[8px] text-white text-[16px] font-semibold transition-colors">
+              <Link href="/contact"
+                className="bg-black hover:bg-gray-900 flex items-center gap-2 px-[25px] py-[15px] rounded-[8px] text-white text-[16px] font-semibold transition-colors">
                 Schedule an Inspection
                 <span className="relative h-[14px] w-[21px] inline-block"><Image src={ARROW_W} alt="" fill className="object-contain" /></span>
               </Link>
-              <a href="tel:5017223455" className="border border-white flex items-center gap-2 px-[25px] py-[15px] rounded-[8px] text-white text-[16px] font-semibold hover:bg-white/10 transition-colors">
+              <a href="tel:5017223455"
+                className="border border-white flex items-center gap-2 px-[25px] py-[15px] rounded-[8px] text-white text-[16px] font-semibold hover:bg-white/10 transition-colors">
                 Call Now
               </a>
             </div>

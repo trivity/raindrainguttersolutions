@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const LOGO = "https://www.figma.com/api/mcp/asset/8962c0d9-8044-441e-a40f-c196130ecf9c";
-const SOCIAL_FB = "https://www.figma.com/api/mcp/asset/c9083f21-b02c-44eb-8b58-a2bd7dd719a5";
-const SOCIAL_IG = "https://www.figma.com/api/mcp/asset/0f89ed23-9c7e-42af-8f11-6fe0ce1ffaa1";
-const SOCIAL_TW = "https://www.figma.com/api/mcp/asset/508a85b9-ad20-4cb8-b7b0-168408ab2b9d";
-const SOCIAL_YT = "https://www.figma.com/api/mcp/asset/ce248ffb-91f9-4c52-8d4b-ce52f359f329";
+const SOCIAL_FB = "https://www.figma.com/api/mcp/asset/27ab9c90-44a0-4e45-82e1-91daeb986abb";
+const SOCIAL_IG = "https://www.figma.com/api/mcp/asset/5eead75b-d82b-4e70-a431-43e95e825073";
+const SOCIAL_TW = "https://www.figma.com/api/mcp/asset/d3229842-05f1-4f7f-b319-f5efbcca3154";
+const SOCIAL_YT = "https://www.figma.com/api/mcp/asset/819b9419-b330-4587-9637-33f920dd5026";
 const DIVIDER = "https://www.figma.com/api/mcp/asset/bdfb5dd4-283f-462a-8506-e5f8f5ec287a";
 
 export default function Footer() {
